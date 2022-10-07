@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /**
  * Ne modifiez ni les noms des classes, ni les noms des méthodes.
@@ -28,7 +29,26 @@ public class Ex17_InteractifTableMult {
 	public void interactif() {
 		
 		Scanner scanner = new Scanner(System.in) ;
+		boolean arret = false;
+		int chiffre=0;
+		do {
+			System.out.println("Saisissez un nombre :");
+			chiffre=scanner.nextInt();
+			if (chiffre >= 1 && chiffre <= 10) {
+				arret = true;
+			}
+			/*else {
+				System.out.println("Veuillez ressaisir un nombre :");
+				chiffre=scanner.nextInt();
+			}*/
 		
+		}
+		while(!arret);
+		
+		System.out.println("Table de " + chiffre + " :");
+		for (int i = 1; i <= 10; i++) {
+			Resultat.log(chiffre + "*" + i + "=" + (chiffre * i));
+		}
 		// TODO Tant que le nombre saisi par l'utilisateur n'est pas compris
 		// entre 1 et 10 l'application continue à demander un nombre à l'utilisateur.
 		

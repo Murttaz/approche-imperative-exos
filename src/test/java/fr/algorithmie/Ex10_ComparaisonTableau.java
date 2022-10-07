@@ -1,11 +1,14 @@
 package fr.algorithmie;
 
+import java.util.Iterator;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /**
  * Ne modifiez ni les noms des classes, ni les noms des méthodes.
@@ -27,7 +30,16 @@ public class Ex10_ComparaisonTableau {
 	@Test
 	@Question(numero = 1)
 	public void calculerElementsCommuns() {
-
+		int commun=0;
+		for(int i=0;i<array1.length;i++) {
+			for(int j=0;j<array2.length;j++) {
+				if (array1[i]==array2[j]) {
+					commun+=1;
+				}
+			}
+			
+		}
+		Resultat.log(commun);
 		// TODO LOGUER le nombre de valeurs communes aux 2 tableaux.
 		// Exemple : On peut déjà voir que les valeurs 3 et 8 sont communes aux 2 tableaux, mais
 		// Combien y en a t'il au total ?

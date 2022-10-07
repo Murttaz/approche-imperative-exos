@@ -28,14 +28,20 @@ public class Ex15_InteractifSommeArithmetique {
 	public void interactif() {
 		
 		Scanner scanner = new Scanner(System.in) ;
-		
+		System.out.println("Veuillez saisir un nombre : ");
 		// TODO Demandez un nombre à l'utilisateur puis LOGUEZ ce nombre 
 		// avec Resultat.log
-		
+		int nb = scanner.nextInt();
+		Resultat.log(nb);
 		
 		// TODO LOGUEZ avec Resultat.log la somme de 1 à ce nombre inclus
+		int sommeNb=0;
 		
+		for (int i = 1; i <= nb; i++) {
+			sommeNb += i;
+		}
 		
+		Resultat.log(sommeNb);
 		scanner.close();
 	}
 

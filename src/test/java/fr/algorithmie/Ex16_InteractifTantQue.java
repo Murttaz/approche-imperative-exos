@@ -29,6 +29,18 @@ public class Ex16_InteractifTantQue {
 		
 		Scanner scanner = new Scanner(System.in) ;
 		
+		int Nb=0;
+		boolean arrete=false;
+		
+		do {
+			System.out.println("Saisissez un nombre :");
+			Nb=scanner.nextInt();
+			if (Nb >= 1 && Nb <= 10) {
+				arrete = true;
+			}
+		}
+			while (!arrete); 
+		Resultat.log(Nb);
 		// TODO Tant que le nombre saisi par l'utilisateur n'est pas compris
 		// entre 1 et 10 inclus l'application continue à demander un nombre à l'utilisateur.
 		// Si ce nombre est compris entre 1 et 10, l'application LOGUE le résultat 

@@ -29,6 +29,22 @@ public class Ex18_InteractifPlusGrand {
 		
 		Scanner scanner = new Scanner(System.in) ;
 		
+		int nombre = 0;
+		int []tab= new int[10];
+		for (int i=0;i<tab.length;i++) {
+			System.out.println("saisissez un nombre :");
+			nombre=scanner.nextInt();
+			tab[i]=nombre;
+			Resultat.log(tab[i]);
+		}
+		
+		int max=0;
+		for (int j=0;j<tab.length;j++) {
+			if (tab[j]>max) {
+				max=tab[j];
+			}
+		}
+		Resultat.log(max);
 		// TODO Demander à l'utilisateur de saisir 10 nombres entiers
 		// TODO Affichez chaque nombre saisi avec Resultat.log
 		// TODO Enfin affichez avec Resultat.log le max des 10 nombres
